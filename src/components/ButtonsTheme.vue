@@ -58,4 +58,21 @@ export default{
     width: 60px;
     border: 2px solid white;
 }
+.buttonDark{
+    color: white;
+    background: black;
+
+}
+.buttonEarth{
+    background: #f12711;
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711); 
+    background: linear-gradient(to right, #f5af19, #f12711); 
+    color: white;
+}
+.buttonOcean{
+    background: #1A2980;
+    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
+    background: linear-gradient(to right, #26D0CE, #1A2980);
+    color: white;
+}
 </style>
