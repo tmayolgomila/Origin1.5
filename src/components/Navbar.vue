@@ -30,7 +30,10 @@ export default {
     <div class="containerNavbar">
 
     <div class="title">
-      <h1>Origin</h1>
+      <h1 id="origin1" v-if="this.classicTheme.value == true">Origin</h1>
+      <h1 id="origin2" v-if="this.darkTheme.value == true">Origin</h1>
+      <h1 id="origin3" v-if="this.earthTheme.value == true">Origin</h1>
+      <h1 id="origin4" v-if="this.oceanTheme.value == true">Origin</h1>
     </div>
 
 
