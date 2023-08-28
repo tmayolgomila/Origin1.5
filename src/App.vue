@@ -5,37 +5,28 @@ import Navbar from '../src/components/Navbar.vue'
 </script>
 
 <template >
-<div v-if="this.classicTheme.value == true" id="appMain1">
-
+<div v-if="this.classicTheme.value " id="appMain1">
     <Navbar />
-
 </div>
-<div v-if="this.darkTheme.value == true" id="appMain2">
-
+<div v-else-if="this.darkTheme.value " id="appMain2">
     <Navbar />
-
 </div>
-<div v-if="this.earthTheme.value == true" id="appMain3">
-
-<Navbar />
-
+<div v-else-if="this.earthTheme.value " id="appMain3">
+    <Navbar />
 </div>
-<div v-if="this.oceanTheme.value == true" id="appMain4">
-
-<Navbar />
-
+<div v-else-if="this.oceanTheme.value " id="appMain4">
+    <Navbar />
 </div>
-<div v-else  id="appMain1">
 
-<Navbar />
 
-</div>
+
 </template>
 
 <style scoped>
 #appMain1{
     background: white;
     height: 100vh;
+    color: black;
 }
 #appMain2{
     background: black;

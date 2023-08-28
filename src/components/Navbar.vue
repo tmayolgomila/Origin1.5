@@ -15,10 +15,17 @@ export default {
     methods: {
         toggleNavbar() {
             this.showNavbar = !this.showNavbar;
+            console.log(this.showNavbar + ' showNavbar')
         },
         hiddeNavbar() {
             this.showNavbar = !this.showNavbar
         }
+    },
+    mounted(){
+        console.log(this.classicTheme.value +' classic')
+        console.log(this.darkTheme.value +' dark')
+        console.log(this.earthTheme.value +' earth')
+        console.log(this.oceanTheme.value +' ocean')
     }
 }
 
@@ -31,20 +38,17 @@ export default {
 
     <div class="title">
       <h1 id="origin1" v-if="this.classicTheme.value == true">Origin</h1>
-      <h1 id="origin2" v-if="this.darkTheme.value == true">Origin</h1>
-      <h1 id="origin3" v-if="this.earthTheme.value == true">Origin</h1>
-      <h1 id="origin4" v-if="this.oceanTheme.value == true">Origin</h1>
+      <h1 id="origin2" v-else>Origin</h1>
     </div>
 
 
-        <button @click="toggleNavbar" class="menuButton">
+    <button @click="toggleNavbar" class="menuButton">
         <div v-if="showNavbar">
            <img src="../assets/icons/close.svg" alt="" width="30">
         </div>
         <div v-else>
             <img src="../assets/icons/menu.svg" alt="" width="30">
         </div>
-        
     </button>
 
     <div v-if="showNavbar" class="navbarItemsContainer">
@@ -68,7 +72,9 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
+
 .navbarItems{
     margin: 10px 0; 
     font-size: 42px;
@@ -98,6 +104,12 @@ export default {
 .title h1 {
   font-size: 1.5rem;
   margin: 0;
+}
+#origin1{
+    color: black;
+}
+#origin2{
+    color: white;
 }
 
 
