@@ -44,10 +44,13 @@ export default {
 
     <button @click="toggleNavbar" class="menuButton">
         <div v-if="showNavbar">
-           <img src="../assets/icons/close.svg" alt="" width="30">
+            <div v-if="this.classicTheme.value"><img src="../assets/icons/close.svg" alt="" width="30"></div>
+            <div v-else><img src="../assets/icons/close-white.svg" alt="" width="30"></div>
         </div>
         <div v-else>
-            <img src="../assets/icons/menu.svg" alt="" width="30">
+           
+            <div v-if="this.classicTheme.value"><img src="../assets/icons/menu.svg" alt="" width="30"></div>
+            <div v-else> <img src="../assets/icons/menu-white.svg" alt="" width="30"></div>
         </div>
     </button>
 
